@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Not Found – DASH Engineering</title>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f4f6f9;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .error-wrapper {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1rem;
+        }
+
+        .error-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+            max-width: 640px;
+            width: 100%;
+            padding: 2.5rem 2rem 2rem;
+            text-align: center;
+        }
+
+        .error-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background: #fff3f3;
+            margin-bottom: 1.25rem;
+        }
+
+        .error-icon svg {
+            width: 40px;
+            height: 40px;
+            fill: #f0a500;
+        }
+
+        h1 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #222;
+            margin-bottom: 0.6rem;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.55;
+            margin-bottom: 1.75rem;
+        }
+
+        .actions {
+            display: flex;
+            gap: 0.75rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 1.75rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.55rem 1.4rem;
+            border-radius: 5px;
+            font-size: 0.92rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            transition: opacity .15s;
+        }
+
+        .btn:hover { opacity: 0.85; }
+
+        .btn-primary { background: #2d6cb4; color: #fff; }
+        .btn-secondary { background: #e8edf3; color: #2d6cb4; }
+
+        /* Collapsible details */
+        .details-section {
+            text-align: left;
+            border-top: 1px solid #e5e8ec;
+            padding-top: 1.25rem;
+        }
+
+        .details-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 0.85rem;
+            color: #888;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0;
+            user-select: none;
+        }
+
+        .details-toggle:hover { color: #555; }
+
+        .details-toggle .arrow {
+            display: inline-block;
+            transition: transform .2s;
+            font-size: 0.7rem;
+        }
+
+        .details-toggle.open .arrow { transform: rotate(90deg); }
+
+        .details-body {
+            display: none;
+            margin-top: 0.85rem;
+        }
+
+        .details-body.open { display: block; }
+
+        .request-id {
+            font-size: 0.78rem;
+            color: #aaa;
+            margin-bottom: 0.6rem;
+        }
+
+        .error-text {
+            background: #f7f8fa;
+            border: 1px solid #e0e4ea;
+            border-radius: 5px;
+            padding: 0.9rem 1rem;
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 0.75rem;
+            color: #c0392b;
+            white-space: pre-wrap;
+            word-break: break-word;
+            max-height: 280px;
+            overflow-y: auto;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.78rem;
+            color: #aaa;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+<div class="error-wrapper">
+    <div class="error-card">
+        <div class="error-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+            </svg>
+        </div>
+
+        <h1>Page Not Found</h1>
+        <p class="subtitle">The page you are looking for does not exist or has been moved.</p>
+
+        <div class="actions">
+            <a href="javascript:history.back()" class="btn btn-secondary">Go Back</a>
+            <a href="/" class="btn btn-primary">Go to Home</a>
+        </div>
+
+            <div class="details-section">
+                <button class="details-toggle" id="detailsToggle" onclick="toggleDetails()" aria-expanded="false">
+                    <span class="arrow">&#9658;</span>
+                    <span>Technical details</span>
+                </button>
+
+                <div class="details-body" id="detailsBody">
+                        <p class="request-id">Request ID: 0HNL5OA4V1T9A:00000001</p>
+                </div>
+            </div>
+    </div>
+</div>
+
+<footer>
+    &copy; 2026 DASH Engineering Philippines Inc.
+</footer>
+
+<script>
+    function toggleDetails() {
+        var btn = document.getElementById('detailsToggle');
+        var body = document.getElementById('detailsBody');
+        var open = btn.classList.toggle('open');
+        body.classList.toggle('open', open);
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+</script>
+</body>
+</html>
