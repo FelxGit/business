@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.shemberg.com.ph)",
+      "Bash(Get-ChildItem -Path \"C:\\\\Projects\\\\business\\\\www.shemberg.com.ph\" -Recurse -Force)",
+      "Bash(Select-Object FullName, Length, LastWriteTime)",
+      "Bash(Format-Table -AutoSize)",
+      "Bash(git ls-tree *)",
+      "Bash(python3 -c ' *)",
+      "Bash(grep -E \"\\\\.\\(html|css|js|md|json|txt|xml|webmanifest\\)$\")",
+      "Bash(git checkout *)",
+      "Bash(curl -sL -o logo.png \"https://static.wixstatic.com/media/7b175e_c0674d4e26a0453b81287ec3fb00b444~mv2.png/v1/fill/w_200,h_200,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/shemberg%20logo.png\")",
+      "Bash(curl -sL -o certificates.jpg \"https://static.wixstatic.com/media/7b175e_25a9995b88ee4bbca81146672fc21be1~mv2.jpg/v1/fill/w_1151,h_300,al_c,lg_1,q_80,enc_avif,quality_auto/certificates-1-1024x267.jpg\")",
+      "Bash(curl -sL -o hero-bg.jpg \"https://static.wixstatic.com/media/7b175e_69f58fbf59974ff49e49f5c65d209cac~mv2.jpg/v1/fill/w_1920,h_800,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/7b175e_69f58fbf59974ff49e49f5c65d209cac~mv2.jpg\")",
+      "Bash(curl -sL -o content-graphic.png \"https://static.wixstatic.com/media/7b175e_b714c215b41e45dfba7630bb9f6f4664~mv2.png/v1/fill/w_766,h_326,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/logo-29900-1024x436.png\")",
+      "Bash(curl -sL -o product-section.png \"https://static.wixstatic.com/media/7b175e_708f033fab7e4f1f9c657dad8ec6c805~mv2.png/v1/crop/x_0,y_0,w_940,h_731/fill/w_806,h_463,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/7b175e_708f033fab7e4f1f9c657dad8ec6c805~mv2.png\")",
+      "Bash(Get-ChildItem -Recurse -File)",
+      "Bash(Select-Object FullName, Length)"
+    ]
+  }
+}
